@@ -83,7 +83,7 @@ We will use the "upstream copy" repo in the following way:
 ### Chart repo
 
 Now, it's time to create our "chart repo" and reference the code we have in "upstream copy".
-Go to `github` and create a new repo using the `ginatswarm-template-app` template. I've created
+Go to `github` and create a new repo using the `ginatswarm-aws-pod-identity-webhook-app-app` aws-pod-identity-webhook-app. I've created
 <https://github.com/giantswarm/loki-app>.
 
 Clone this repo to your local machine and setup "upstream copy" as remote to track:
@@ -91,7 +91,7 @@ Clone this repo to your local machine and setup "upstream copy" as remote to tra
 ```
 git clone git@github.com:giantswarm/loki-app.git
 cd loki-app
-git rm -r helm/APP-NAME-app && git commit -am "remove template chart" && git push  # optionally remove the chart template
+git rm -r helm/APP-NAME-app && git commit -am "remove aws-pod-identity-webhook-app chart" && git push  # optionally remove the chart aws-pod-identity-webhook-app
 git remote add -f --no-tags upstream-copy git@github.com:giantswarm/grafana-helm-charts-upstream.git  # add remote
 ```
 

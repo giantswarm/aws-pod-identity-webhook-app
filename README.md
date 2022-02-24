@@ -1,9 +1,9 @@
-[![CircleCI](https://circleci.com/gh/giantswarm/{APP-NAME}-app.svg?style=shield)](https://circleci.com/gh/giantswarm/{APP-NAME}-app)
+[![CircleCI](https://circleci.com/gh/giantswarm/aws-pod-identity-webhook-app-app.svg?style=shield)](https://circleci.com/gh/giantswarm/aws-pod-identity-webhook-app-app)
 
-# {APP-NAME} chart
+# aws-pod-identity-webhook-app chart
 
-Giant Swarm offers a {APP-NAME} App which can be installed in workload clusters.
-Here we define the {APP-NAME} chart with its templates and default configuration.
+Giant Swarm offers a aws-pod-identity-webhook-app App which can be installed in workload clusters.
+Here we define the aws-pod-identity-webhook-app chart with its aws-pod-identity-webhook-apps and default configuration.
 
 **What is this app?**
 
@@ -53,15 +53,11 @@ See our [full reference on how to configure apps](https://docs.giantswarm.io/app
 
 This app has been tested to work with the following workload cluster release versions:
 
-- _add release version_
+- v17.1.0
 
 ## Limitations
 
 Some apps have restrictions on how they can be deployed.
 Not following these limitations will most likely result in a broken deployment.
 
-- _add limitation_
-
-## Credit
-
-- {APP HELM REPOSITORY}
+- Only valid on AWS clusters with required IAM permissions configured
