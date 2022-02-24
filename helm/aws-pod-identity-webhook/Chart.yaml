@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: 0.0.1
 name: aws-pod-identity-webhook
 description: Please add description
-home: https://github.com/giantswarm/aws-pod-identity-webhook-app
+home: https://github.com/giantswarm/aws-pod-identity-webhook
 sources:
 - https://github.com/aws/amazon-eks-pod-identity-webhook
 version: [[ .Version ]]

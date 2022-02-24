@@ -12,6 +12,6 @@ lint-chart: ## Runs ct against the default chart.
 	rm -rf /tmp/$(APPLICATION)-test
 	mkdir -p /tmp/$(APPLICATION)-test/helm
 	cp -a ./helm/$(APPLICATION) /tmp/$(APPLICATION)-test/helm/
-	architect helm aws-pod-identity-webhook-app --dir /tmp/$(APPLICATION)-test/helm/$(APPLICATION)
+	architect helm aws-pod-identity-webhook --dir /tmp/$(APPLICATION)-test/helm/$(APPLICATION)
 	docker run -it --rm -v /tmp/$(APPLICATION)-test:/wd --workdir=/wd --name ct $(IMAGE) ct lint --validate-maintainers=false --charts="helm/$(APPLICATION)"
 	rm -rf /tmp/$(APPLICATION)-test

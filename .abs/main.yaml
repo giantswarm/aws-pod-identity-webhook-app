@@ -1,4 +1,4 @@
 replace-chart-version-with-git: true
 generate-metadata: true
-chart-dir: ./helm/aws-pod-identity-webhook-app
+chart-dir: ./helm/aws-pod-identity-webhook
 destination: ./build
