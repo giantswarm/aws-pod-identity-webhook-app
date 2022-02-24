@@ -1,6 +1,4 @@
-# TEMPLATE-APP: This is set as a reasonable default, feel free to change.
-
-name: {APP-NAME}
+name: aws-pod-identity-webhook
 namespace: kube-system
 serviceType: managed
 
@@ -10,6 +8,6 @@ project:
 
 image:
   registry: quay.io
-  name: giantswarm/{APP-NAME}
+  name: giantswarm/aws-pod-identity-webhook
   tag: v0.0.1
   pullPolicy: IfNotPresent
