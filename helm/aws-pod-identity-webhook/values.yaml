@@ -2,12 +2,19 @@ name: aws-pod-identity-webhook
 namespace: kube-system
 serviceType: managed
 
+# The prefix for annotations used on ServiceAccounts, e.g. `eks.amazonaws.com/role-arn`
+annotationPrefix: eks.amazonaws.com
+
 project:
   branch: "[[ .Branch ]]"
   commit: "[[ .SHA ]]"
 
 image:
-  registry: quay.io
-  name: giantswarm/aws-pod-identity-webhook
-  tag: v0.0.1
+  registry: docker.io
+  name: amazon/amazon-eks-pod-identity-webhook
+  tag: v0.3.0
   pullPolicy: IfNotPresent
+
+ports:
+  webhook: 443
+  metrics: 9999

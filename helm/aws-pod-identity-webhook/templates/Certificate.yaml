@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Vaues.namespace }}
+  labels:
+    {{- include "labels.common" . | nindent 4 }}
+spec:
+  commonName: "{{ .Values.name }}.{{ .Vaues.namespace }}.svc"
+  dnsNames:
+  - "{{ .Values.name }}"
+  - "{{ .Values.name }}.{{ .Vaues.namespace }}"
+  - "{{ .Values.name }}.{{ .Vaues.namespace }}.svc"
+  - "{{ .Values.name }}.{{ .Vaues.namespace }}.svc.local"
+  issuerRef:
+    kind: ClusterIssuer
+    name: selfsigned-giantswarm
+  secretName: {{ .Values.name }}
+---
