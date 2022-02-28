@@ -10,8 +10,8 @@ project:
   commit: "[[ .SHA ]]"
 
 image:
-  registry: docker.io
-  name: amazon/amazon-eks-pod-identity-webhook
+  registry: quay.io
+  name: giantswarm/amazon-eks-pod-identity-webhook
   tag: v0.3.0
   pullPolicy: IfNotPresent
 
