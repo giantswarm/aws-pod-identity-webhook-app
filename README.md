@@ -6,6 +6,8 @@ Helm Chart for AWS Pod Identity Webhook in Workload Clusters.
 
 * Installs the the [amazon-eks-pod-identity-webhook](https://github.com/aws/amazon-eks-pod-identity-webhook).
 
+This webhook is for mutating pods that will require AWS IAM access.
+
 # Deployment
 
 Managed by the Giant Swarm [App Platform](https://docs.giantswarm.io/app-platform/).
@@ -13,6 +15,10 @@ Managed by the Giant Swarm [App Platform](https://docs.giantswarm.io/app-platfor
 # Configuration Options
 
 - All configuration options are documented in the [values.yaml](/helm/aws-pod-identity-webhook/values.yaml) file.
+
+# Usage
+
+See the [amazon-eks-pod-identity-webhook walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough)
 
 # For developers
 

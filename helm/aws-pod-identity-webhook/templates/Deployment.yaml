@@ -1,0 +1,48 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "labels.common" . | nindent 4 }}
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      {{- include "labels.selector" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "labels.common" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ .Values.name }}
+      containers:
+        - name: pod-identity-webhook
+          image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command:
+            - /webhook
+            - --in-cluster=true
+            - --namespace={{ .Values.namespace }}
+            - --service-name={{ .Values.name }}
+            - --annotation-prefix={{ .Values.annotationPrefix }}
+            - --token-audience=sts.amazonaws.com
+            - --port={{ .Values.ports.webhook }}
+            - --metrics-port={{ .Values.ports.metrics }}
+            - --logtostderr
+          ports:
+            - name: web
+              protocol: TCP
+              containerPort: {{ .Values.ports.webhook }}
+            - name: metrics
+              protocol: TCP
+              containerPort: {{ .Values.ports.metrics }}
+          volumeMounts:
+            - name: cert
+              mountPath: "/etc/webhook/certs"
+              readOnly: true
+      volumes:
+        - name: cert
+          secret:
+            secretName: {{ .Values.name }}
+---

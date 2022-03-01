@@ -7,4 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Initial chart release
+
 [Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/tree/master

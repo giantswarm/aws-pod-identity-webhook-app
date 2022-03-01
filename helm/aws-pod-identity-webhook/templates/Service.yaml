@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "labels.common" . | nindent 4 }}
+    giantswarm.io/monitoring: "true"
+  annotations:
+    giantswarm.io/monitoring-port: "{{ .Values.ports.metrics }}"
+    giantswarm.io/monitoring-app-label: "aws-pod-identity-webhook"
+  labels:
+spec:
+  ports:
+  - port: 443
+    targetPort: {{ .Values.ports.webhook }}
+  selector:
+    {{- include "labels.selector" . | nindent 4 }}
+---
