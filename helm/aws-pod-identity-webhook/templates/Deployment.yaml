@@ -30,6 +30,7 @@ spec:
             - --port={{ .Values.ports.webhook }}
             - --metrics-port={{ .Values.ports.metrics }}
             - --logtostderr
+            - --tls-secret={{ .Values.name }}
           ports:
             - name: web
               protocol: TCP
