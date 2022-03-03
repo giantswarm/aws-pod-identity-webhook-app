@@ -12,6 +12,7 @@ spec:
   - "{{ .Values.name }}.{{ .Values.namespace }}"
   - "{{ .Values.name }}.{{ .Values.namespace }}.svc"
   - "{{ .Values.name }}.{{ .Values.namespace }}.svc.local"
+  - "{{ .Values.name }}.{{ .Values.namespace }}.svc.cluster.local"
   issuerRef:
     kind: ClusterIssuer
     name: selfsigned-giantswarm
