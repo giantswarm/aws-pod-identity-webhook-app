@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Avoid running mutating webhook against it's own pods
+
 ## [0.3.1] - 2022-03-03
 
 ### Fixed
