@@ -23,6 +23,11 @@ webhooks:
       - key: "app.kubernetes.io/name"
         operator: "NotIn"
         values: ["{{.Values.name}}"]
+  namespaceSelector:
+    matchExpressions:
+      - key: "kubernetes.io/metadata.name"
+        operator: NotIn
+        values: ["kube-system"]
   rules:
     - operations: [ "CREATE" ]
       apiGroups: [""]
