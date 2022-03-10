@@ -18,6 +18,11 @@ webhooks:
       namespace: {{ .Values.namespace }}
       path: "/mutate"
     caBundle: Cg==
+  objectSelector:
+    matchExpressions:
+      - key: "app.kubernetes.io/name"
+        operator: "NotIn"
+        values: ["{{.Values.name}}"]
   rules:
     - operations: [ "CREATE" ]
       apiGroups: [""]
