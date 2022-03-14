@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Support for forcing the webhook to run on pods in kube-system with specific label
+
 ## [0.3.2] - 2022-03-10
 
 ### Fixed

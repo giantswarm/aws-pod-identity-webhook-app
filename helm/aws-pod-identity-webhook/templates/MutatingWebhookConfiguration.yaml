@@ -33,4 +33,28 @@ webhooks:
       apiGroups: [""]
       apiVersions: ["v1"]
       resources: ["pods"]
+- name: {{ .Values.name }}.amazonaws.com-kube-system
+  failurePolicy: Ignore
+  admissionReviewVersions: [v1beta1]
+  sideEffects: None
+  clientConfig:
+    service:
+      name: {{ .Values.name }}
+      namespace: {{ .Values.namespace }}
+      path: "/mutate"
+    caBundle: Cg==
+  objectSelector:
+    matchExpressions:
+      - key: "aws-pod-identity.giantswarm.io/force"
+        operator: "Exists"
+  namespaceSelector:
+    matchExpressions:
+      - key: "kubernetes.io/metadata.name"
+        operator: In
+        values: ["kube-system"]
+  rules:
+    - operations: [ "CREATE" ]
+      apiGroups: [""]
+      apiVersions: ["v1"]
+      resources: ["pods"]
 ---
