@@ -26,7 +26,7 @@ spec:
             - --namespace={{ .Values.namespace }}
             - --service-name={{ .Values.name }}
             - --annotation-prefix={{ .Values.annotationPrefix }}
-            - --token-audience=sts.amazonaws.com
+            - --token-audience={{ .Values.tokenAudience }}
             - --port={{ .Values.ports.webhook }}
             - --metrics-port={{ .Values.ports.metrics }}
             - --logtostderr
