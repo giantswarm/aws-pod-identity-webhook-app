@@ -22,4 +22,5 @@ ports:
 verticalPodAutoscaler:
   enabled: true
 
-tokenAudience: sts.amazonaws.com
+aws:
+  tokenAudience: sts.amazonaws.com
