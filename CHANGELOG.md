@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Allow pod-identity-webhook to inject volumes in `kube-system` namespace.
+
 ## [0.8.0] - 2022-04-21
 
 ### Changed
