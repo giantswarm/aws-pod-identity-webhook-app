@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Change webhook port to `9443`
+- Update image to the latest version `v0.4.0`.
+
 ## [0.8.1] - 2022-05-19
 
 ### Fixed
