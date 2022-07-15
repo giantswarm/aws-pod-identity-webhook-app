@@ -12,7 +12,7 @@ metadata:
   labels:
 spec:
   ports:
-  - port: 9443
+  - port: 443
     targetPort: {{ .Values.ports.webhook }}
   selector:
     {{- include "labels.selector" . | nindent 4 }}
