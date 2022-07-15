@@ -12,11 +12,11 @@ project:
 image:
   registry: quay.io
   name: giantswarm/amazon-eks-pod-identity-webhook
-  tag: v0.3.0
+  tag: v0.4.0
   pullPolicy: IfNotPresent
 
 ports:
-  webhook: 443
+  webhook: 9443
   metrics: 9999
 
 verticalPodAutoscaler:
