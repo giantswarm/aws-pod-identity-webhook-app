@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Set `--in-cluster` to false because it's deprecated.
+
 ## [0.9.0] - 2022-07-15
 
 ### Changed

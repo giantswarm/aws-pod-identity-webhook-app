@@ -22,7 +22,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
             - /webhook
-            - --in-cluster=true
+            - --in-cluster=false
             - --namespace={{ .Values.namespace }}
             - --service-name={{ .Values.name }}
             - --annotation-prefix={{ .Values.annotationPrefix }}
