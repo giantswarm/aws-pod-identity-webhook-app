@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added Pod Restarter `CronJob` that automatically restarts pods using IRSA that don't have the needed configurations set.
+
 ## [0.10.0] - 2022-09-20
 
 ### Changed

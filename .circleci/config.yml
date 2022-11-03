@@ -3,8 +3,14 @@ orbs:
   architect: giantswarm/architect@4.25.0
 
 workflows:
-  package-and-push-chart-on-tag:
+  build:
     jobs:
+      - architect/go-build:
+          name: go-build
+          binary: aws-pod-identity-restarter
+          filters:
+            tags:
+              only: /^v.*/
       - architect/push-to-app-catalog:
           context: "architect"
           # executor: "app-build-suite" # uncomment this if you want automatic metadata generation and helm chart linting
