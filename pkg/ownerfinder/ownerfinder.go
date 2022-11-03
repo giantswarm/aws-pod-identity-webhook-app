@@ -67,6 +67,7 @@ func (of *OwnerFinder) FindOwner(ctx context.Context, pod corev1.Pod) (*metav1.O
 
 	if lastOwner == nil {
 		of.logger.Debugf(ctx, "Pod %s/%s does not seem to have any owner", pod.Namespace, pod.Name)
+		return nil, nil
 	}
 
 	of.logger.Debugf(ctx, "Pod %s/%s is ultimately owned by %s %s", pod.Namespace, pod.Name, lastOwner.Kind, lastOwner.Name)
