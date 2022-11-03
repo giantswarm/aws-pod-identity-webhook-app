@@ -61,3 +61,9 @@ require (
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3 // indirect
 	sigs.k8s.io/yaml v1.2.0 // indirect
 )
+
+replace (
+	github.com/miekg/dns => github.com/miekg/dns v1.1.50
+	github.com/prometheus/client_golang => github.com/prometheus/client_golang v1.12.2
+	golang.org/x/text => golang.org/x/text v0.3.8
+)
