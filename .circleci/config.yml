@@ -15,6 +15,7 @@ workflows:
       # Ensure that for every commit (all branches), and for every new release tag,
       # an image is pushed to Quay.
       - architect/push-to-docker:
+          context: "architect"
           name: push-to-quay
           image: "quay.io/giantswarm/aws-pod-identity-restarter"
           username_envar: "QUAY_USERNAME"
@@ -41,6 +42,7 @@ workflows:
       # Ensure that for every commit to master, and for every new release tag,
       # an image gets pushed to the Aliyun registry.
       - architect/push-to-docker:
+          context: "architect"
           name: push-to-aliyun
           image: "registry-intl.cn-shanghai.aliyuncs.com/giantswarm/aws-pod-identity-restarter"
           username_envar: "ALIYUN_USERNAME"
