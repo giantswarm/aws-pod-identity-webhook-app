@@ -1,0 +1,29 @@
+{{ if .Values.restarter.enabled }}
+{{- if le (int .Capabilities.KubeVersion.Minor) 24 }}
+apiVersion: policy/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  name: {{ .Values.name }}-restarter
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "labels.common" . | nindent 4 }}
+spec:
+  allowPrivilegeEscalation: false
+  volumes:
+  - emptyDir
+  fsGroup:
+    ranges:
+    - max: 65535
+      min: 1
+    rule: MustRunAs
+  seLinux:
+    rule: RunAsAny
+  supplementalGroups:
+    ranges:
+    - max: 65535
+      min: 1
+    rule: MustRunAs
+  runAsUser:
+    rule: MustRunAsNonRoot
+{{ end }}
+{{ end }}

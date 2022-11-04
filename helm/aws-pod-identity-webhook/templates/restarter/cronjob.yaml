@@ -1,4 +1,4 @@
-{{ if .Values.cronjob.enabled }}
+{{ if .Values.restarter.enabled }}
 apiVersion: batch/v1
 kind: CronJob
 metadata:
@@ -6,6 +6,7 @@ metadata:
   namespace: {{ .Values.namespace }}
   labels:
     {{- include "labels.common" . | nindent 4 }}
+    component: restarter
 spec:
   concurrencyPolicy: Allow
   failedJobsHistoryLimit: 3
@@ -13,22 +14,24 @@ spec:
     metadata:
       labels:
         {{- include "labels.common" . | nindent 8 }}
+        component: restarter
     spec:
       template:
         metadata:
           labels:
             {{- include "labels.common" . | nindent 12 }}
+            component: restarter
         spec:
           containers:
-            - image: "{{ .Values.cronjob.image.registry }}/{{ .Values.cronjob.image.name }}:{{ .Values.cronjob.image.tag }}"
+            - image: "{{ .Values.restarter.image.registry }}/{{ .Values.restarter.image.name }}:{{ .Values.restarter.image.tag }}"
               imagePullPolicy: IfNotPresent
               name: pod-restarter
               resources: {}
           dnsPolicy: ClusterFirst
           restartPolicy: Never
-          serviceAccountName:  {{ .Values.name }}
+          serviceAccountName:  {{ .Values.name }}-restarter
           terminationGracePeriodSeconds: 30
-  schedule: '{{ .Values.cronjob.schedule }}'
+  schedule: '{{ .Values.restarter.schedule }}'
   startingDeadlineSeconds: 240
   successfulJobsHistoryLimit: 1
   suspend: false

@@ -25,7 +25,7 @@ verticalPodAutoscaler:
 aws:
   tokenAudience: sts.amazonaws.com
 
-cronjob:
+restarter:
   enabled: true
   schedule: "*/5 * * * *"
   image:
