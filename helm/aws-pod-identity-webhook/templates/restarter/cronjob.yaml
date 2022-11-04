@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: {{ .Values.name }}
+  name: {{ .Values.name }}-restarter
   namespace: {{ .Values.namespace }}
   labels:
     {{- include "labels.common" . | nindent 4 }}
