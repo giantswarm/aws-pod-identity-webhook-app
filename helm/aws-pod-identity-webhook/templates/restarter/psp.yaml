@@ -9,8 +9,7 @@ metadata:
     {{- include "labels.common" . | nindent 4 }}
 spec:
   allowPrivilegeEscalation: false
-  volumes:
-  - emptyDir
+  volumes: []
   fsGroup:
     ranges:
     - max: 65535
