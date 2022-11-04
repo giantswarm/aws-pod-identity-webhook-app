@@ -81,7 +81,7 @@ func TestPodFinder_getServiceAccountsWithIRSAEnabled(t *testing.T) {
 			client := unittest.FakeK8sClient()
 
 			for _, sa := range tt.existing {
-				_ = client.CtrlClient().Create(ctx, &sa)
+				_ = client.CtrlClient().Create(ctx, &sa) //nolint:gosec
 			}
 
 			p := &PodFinder{
@@ -174,7 +174,7 @@ func TestPodFinder_getPodsUsingServiceAccount(t *testing.T) {
 			client := unittest.FakeK8sClient()
 
 			for _, pod := range tt.existing {
-				_ = client.CtrlClient().Create(ctx, &pod)
+				_ = client.CtrlClient().Create(ctx, &pod) //nolint:gosec
 			}
 
 			p := &PodFinder{
