@@ -13,10 +13,10 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/rest"
 
-	"github.com/giantswarm/aws-pod-identity-webhook/v2/pkg/ownerfinder"
-	"github.com/giantswarm/aws-pod-identity-webhook/v2/pkg/podfinder"
-	"github.com/giantswarm/aws-pod-identity-webhook/v2/pkg/roller"
-	"github.com/giantswarm/aws-pod-identity-webhook/v2/pkg/types"
+	"github.com/giantswarm/aws-pod-identity-webhook/pkg/ownerfinder"
+	"github.com/giantswarm/aws-pod-identity-webhook/pkg/podfinder"
+	"github.com/giantswarm/aws-pod-identity-webhook/pkg/roller"
+	"github.com/giantswarm/aws-pod-identity-webhook/pkg/types"
 )
 
 type runner struct {

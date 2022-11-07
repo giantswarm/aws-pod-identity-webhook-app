@@ -10,7 +10,7 @@ import (
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/giantswarm/aws-pod-identity-webhook/v2/pkg/unittest"
+	"github.com/giantswarm/aws-pod-identity-webhook/pkg/unittest"
 )
 
 func TestPodFinder_getServiceAccountsWithIRSAEnabled(t *testing.T) {

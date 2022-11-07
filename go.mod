@@ -1,4 +1,4 @@
-module github.com/giantswarm/aws-pod-identity-webhook/v2
+module github.com/giantswarm/aws-pod-identity-webhook
 
 go 1.19
 
