@@ -7,7 +7,7 @@ import (
 	"github.com/giantswarm/micrologger"
 	"github.com/spf13/cobra"
 
-	"github.com/giantswarm/aws-pod-identity-webhook/pkg/project"
+	"github.com/giantswarm/aws-pod-identity-webhook/v2/pkg/project"
 )
 
 type Config struct {

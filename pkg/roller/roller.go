@@ -10,7 +10,7 @@ import (
 	v1 "k8s.io/api/apps/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/giantswarm/aws-pod-identity-webhook/pkg/types"
+	"github.com/giantswarm/aws-pod-identity-webhook/v2/pkg/types"
 )
 
 type Config struct {
