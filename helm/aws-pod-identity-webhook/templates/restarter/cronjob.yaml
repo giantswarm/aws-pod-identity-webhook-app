@@ -1,0 +1,38 @@
+{{ if .Values.restarter.enabled }}
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ .Values.name }}-restarter
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "labels.common" . | nindent 4 }}
+    component: restarter
+spec:
+  concurrencyPolicy: Allow
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    metadata:
+      labels:
+        {{- include "labels.common" . | nindent 8 }}
+        component: restarter
+    spec:
+      template:
+        metadata:
+          labels:
+            {{- include "labels.common" . | nindent 12 }}
+            component: restarter
+        spec:
+          containers:
+            - image: "{{ .Values.restarter.image.registry }}/{{ .Values.restarter.image.name }}:{{ .Values.restarter.image.tag }}"
+              imagePullPolicy: IfNotPresent
+              name: pod-restarter
+              resources: {}
+          dnsPolicy: ClusterFirst
+          restartPolicy: Never
+          serviceAccountName:  {{ .Values.name }}-restarter
+          terminationGracePeriodSeconds: 30
+  schedule: '{{ .Values.restarter.schedule }}'
+  startingDeadlineSeconds: 240
+  successfulJobsHistoryLimit: 1
+  suspend: false
+{{ end }}

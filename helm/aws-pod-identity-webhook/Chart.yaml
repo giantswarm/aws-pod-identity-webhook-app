@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: 0.4.0
+appVersion: [[ .AppVersion ]]
 name: aws-pod-identity-webhook
 description: This webhook is for mutating pods that will require AWS IAM access.
 home: https://github.com/giantswarm/aws-pod-identity-webhook

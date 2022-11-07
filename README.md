@@ -1,12 +1,18 @@
 [![CircleCI](https://circleci.com/gh/giantswarm/aws-pod-identity-webhook.svg?style=shield)](https://circleci.com/gh/giantswarm/aws-pod-identity-webhook)
 
-# aws-pod-identity-webhook chart
+# aws-pod-identity-webhook chart and custom extension
 
-Helm Chart for AWS Pod Identity Webhook in Workload Clusters.
+This repository provides two components:
+
+1. Helm Chart for AWS Pod Identity Webhook in Workload Clusters.
 
 * Installs the the [amazon-eks-pod-identity-webhook](https://github.com/aws/amazon-eks-pod-identity-webhook).
 
 This webhook is for mutating pods that will require AWS IAM access.
+
+2. Custom golang binary that runs as a cronjob
+
+This is used to restart pods that weren't catched by the webhook (because they started before the webhook).
 
 # Deployment
 
