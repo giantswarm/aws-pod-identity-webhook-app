@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2022-11-07
+
 ### Added
 
 - Added Pod Restarter `CronJob` that automatically restarts pods using IRSA that don't have the needed configurations set.
@@ -78,7 +80,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial chart release
 
-[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v0.10.0...HEAD
+[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v0.10.0...v1.0.0
 [0.10.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v0.8.1...v0.9.0
 [0.8.1]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v0.8.0...v0.8.1
