@@ -31,6 +31,7 @@ spec:
             - --metrics-port={{ .Values.ports.metrics }}
             - --logtostderr
             - --tls-secret={{ .Values.name }}
+            - --sts-regional-endpoint
           ports:
             - name: web
               protocol: TCP
