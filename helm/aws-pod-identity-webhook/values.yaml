@@ -12,7 +12,7 @@ project:
 image:
   registry: quay.io
   name: giantswarm/amazon-eks-pod-identity-webhook-gs
-  tag: add-account-id
+  tag: 0.1.0
   pullPolicy: IfNotPresent
 
 ports:
