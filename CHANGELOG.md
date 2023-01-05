@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Undo image update to `giantswarm/amazon-eks-pod-identity-webhook-gs:v0.1.0` our custom fork to which adds the aws account id to the service account `role-arn` annotation
+
 ## [1.2.0] - 2023-01-05
 
 ### Added
