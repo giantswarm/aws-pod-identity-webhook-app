@@ -27,7 +27,8 @@ gsImage:
 # Identifies the cloud provider. This *must*
 # be set. If this is installed as a default app from the default-catalog then this
 # value is set dynamically and will be overridden.
-provider: CHANGEME
+provider:
+  kind: aws
 
 ports:
   webhook: 9443
