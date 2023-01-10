@@ -15,6 +15,20 @@ image:
   tag: v0.4.0
   pullPolicy: IfNotPresent
 
+# We currently have two images available to us as we move towards https://github.com/giantswarm/roadmap/issues/1640
+# This will change when we have changes in our fork merged back upstream.
+# We have to support two images for now because the kiam-agent "vintage" clusters on older release versions (< v18.1.0) doesn't allow
+# for the network calls in changes made and this causes the deployment to fail.
+gsImage:
+  name: giantswarm/amazon-eks-pod-identity-webhook-gs
+  tag: v0.1.0
+
+# provider
+# Identifies the cloud provider. This *must*
+# be set. If this is installed as a default app from the default-catalog then this
+# value is set dynamically and will be overridden.
+provider: CHANGEME
+
 ports:
   webhook: 9443
   metrics: 9999
