@@ -21,7 +21,7 @@ spec:
       serviceAccountName: {{ .Values.name }}
       containers:
         - name: pod-identity-webhook
-          {{- if eq .Values.provider.kind "capa" }}
+          {{- if eq .Values.provider "capa" }}
           image: "{{ .Values.image.registry }}/{{ .Values.gsImage.name }}:{{ .Values.gsImage.tag }}"
           {{- else }}
           image: "{{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Values.image.tag }}"
