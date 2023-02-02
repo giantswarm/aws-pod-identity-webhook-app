@@ -39,6 +39,9 @@ spec:
             - --logtostderr
             - --tls-secret={{ .Values.name }}
             - --sts-regional-endpoint
+            {{- if eq .Values.provider "capa" }}
+            - --compose-role-arn
+            {{- end }}
           ports:
             - name: web
               protocol: TCP
