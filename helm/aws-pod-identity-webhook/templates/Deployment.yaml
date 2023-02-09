@@ -19,6 +19,10 @@ spec:
         component: webhook
     spec:
       serviceAccountName: {{ .Values.name }}
+      securityContext:
+        {{- with .Values.podSecurityContext }}
+          {{- . | toYaml | nindent 8 }}
+        {{- end }}
       containers:
         - name: pod-identity-webhook
           {{- if eq .Values.provider "capa" }}
@@ -49,6 +53,10 @@ spec:
             - name: metrics
               protocol: TCP
               containerPort: {{ .Values.ports.metrics }}
+          securityContext:
+            {{- with .Values.securityContext }}
+              {{- . | toYaml | nindent 10 }}
+            {{- end }}
           volumeMounts:
             - name: cert
               mountPath: "/etc/webhook/certs"
