@@ -21,7 +21,7 @@ image:
 # for the network calls in changes made and this causes the deployment to fail.
 gsImage:
   name: giantswarm/amazon-eks-pod-identity-webhook-gs
-  tag: v0.1.0
+  tag: v0.2.0
 
 # provider
 # Identifies the cloud provider. This *must*

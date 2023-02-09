@@ -44,7 +44,7 @@ workflows:
       - architect/push-to-docker:
           context: "architect"
           name: push-to-aliyun
-          image: "registry-intl.cn-shanghai.aliyuncs.com/giantswarm/aws-pod-identity-restarter"
+          image: "giantswarm-registry.cn-shanghai.cr.aliyuncs.com/giantswarm/aws-pod-identity-restarter"
           username_envar: "ALIYUN_USERNAME"
           password_envar: "ALIYUN_PASSWORD"
           requires:
