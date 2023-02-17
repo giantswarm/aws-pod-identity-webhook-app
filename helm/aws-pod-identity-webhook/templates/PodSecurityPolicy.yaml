@@ -11,6 +11,8 @@ spec:
   allowPrivilegeEscalation: false
   volumes:
   - emptyDir
+  - secret
+  - projected
   fsGroup:
     ranges:
     - max: 65535
@@ -25,6 +27,3 @@ spec:
     rule: MustRunAs
   runAsUser:
     rule: MustRunAsNonRoot
-  volumes:
-    - 'projected'
-    - 'secret'
