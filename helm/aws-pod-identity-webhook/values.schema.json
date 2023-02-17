@@ -119,6 +119,9 @@
         "securityContext": {
             "type": "object",
             "properties": {
+                "runAsUser": {
+                    "type": "integer"
+                },
                 "seccompProfile": {
                     "type": "object",
                     "properties": {
