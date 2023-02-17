@@ -11,6 +11,8 @@ spec:
   allowPrivilegeEscalation: false
   volumes:
   - emptyDir
+  - secret
+  - projected
   fsGroup:
     ranges:
     - max: 65535
