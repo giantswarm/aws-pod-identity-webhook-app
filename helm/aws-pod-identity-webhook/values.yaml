@@ -47,13 +47,5 @@ restarter:
     name: giantswarm/aws-pod-identity-restarter
     tag: "[[ .Version ]]"
 
-# Add seccomp to pod security context
 podSecurityContext:
   runAsUser: 1000
-  seccompProfile:
-    type: RuntimeDefault
-
-# Add seccomp to container security context
-securityContext:
-  seccompProfile:
-    type: RuntimeDefault
