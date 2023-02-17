@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.1] - 2023-02-17
+
 ### Fixed
 
 - Added runAsUser: 1000 to securityContext.
@@ -123,7 +125,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial chart release
 
-[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.6.0...HEAD
+[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.6.1...HEAD
+[1.6.1]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.3.0...v1.4.0
