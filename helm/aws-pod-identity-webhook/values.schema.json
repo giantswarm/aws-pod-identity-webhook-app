@@ -52,14 +52,6 @@
             "properties": {
                 "runAsUser": {
                     "type": "integer"
-                },
-                "seccompProfile": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string"
-                        }
-                    }
                 }
             }
         },
@@ -110,19 +102,6 @@
                 },
                 "schedule": {
                     "type": "string"
-                }
-            }
-        },
-        "securityContext": {
-            "type": "object",
-            "properties": {
-                "seccompProfile": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string"
-                        }
-                    }
                 }
             }
         },
