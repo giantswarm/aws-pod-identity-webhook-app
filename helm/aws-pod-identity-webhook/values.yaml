@@ -45,7 +45,7 @@ restarter:
   image:
     registry: docker.io
     name: giantswarm/aws-pod-identity-restarter
-    tag: [[ .Version ]]
+    tag: "[[ .Version ]]"
 
 # Add seccomp to pod security context
 podSecurityContext:
@@ -54,5 +54,6 @@ podSecurityContext:
 
 # Add seccomp to container security context
 securityContext:
+  runAsUser: 1000
   seccompProfile:
     type: RuntimeDefault

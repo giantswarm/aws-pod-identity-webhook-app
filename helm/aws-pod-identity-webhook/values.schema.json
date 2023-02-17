@@ -101,13 +101,7 @@
                             "type": "string"
                         },
                         "tag": {
-                            "type": "array",
-                            "items": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            }
+                            "type": "string"
                         }
                     }
                 },
@@ -119,6 +113,9 @@
         "securityContext": {
             "type": "object",
             "properties": {
+                "runAsUser": {
+                    "type": "integer"
+                },
                 "seccompProfile": {
                     "type": "object",
                     "properties": {
