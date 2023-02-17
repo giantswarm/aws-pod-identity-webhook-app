@@ -25,3 +25,6 @@ spec:
     rule: MustRunAs
   runAsUser:
     rule: MustRunAsNonRoot
+  volumes:
+    - 'projected'
+    - 'secret'
