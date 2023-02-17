@@ -7,10 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Added runAsUser: 1000 to securityContext.
+
 ### Changed
 
 - Added the use of the runtime/default seccomp profile.
-- Added runAsUser: 1000 to securityContext.
 
 ## [1.5.0] - 2023-02-02
 
