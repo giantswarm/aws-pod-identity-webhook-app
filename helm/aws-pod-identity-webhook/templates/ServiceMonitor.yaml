@@ -16,5 +16,6 @@ spec:
     matchNames:
     - {{ .Values.namespace }}
   selector:
-    {{- include "labels.selector" . | nindent 4 }}
+    matchLabels:
+    {{- include "labels.selector" . | nindent 6 }}
 ---

@@ -14,6 +14,5 @@ spec:
     port: 9999
     targetPort: {{ .Values.ports.metrics }}
   selector:
-    matchLabels:
-      {{- include "labels.selector" . | nindent 6 }}
+    {{- include "labels.selector" . | nindent 4 }}
 ---
