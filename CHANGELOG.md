@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add service name ports
+
+### Fixed
+
+- Remove duplicate labels definition in service
+- Group all monitoring annotations
+
 ## [1.6.2] - 2023-02-17
 
 ### Fixed
