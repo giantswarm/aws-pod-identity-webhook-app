@@ -5,6 +5,10 @@ metadata:
   namespace: {{ .Values.namespace }}
   labels:
     {{- include "labels.common" . | nindent 4 }}
+  annotations:
+    giantswarm.io/monitoring-port: "{{ .Values.ports.metrics }}"
+    giantswarm.io/monitoring-app-label: "aws-pod-identity-webhook"
+    giantswarm.io/monitoring: "true"
 spec:
   ports:
   - name: web
