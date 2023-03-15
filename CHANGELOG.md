@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Change image registry for China.
+- Use `image.registry` value as registry domain for the `restarter` image.
 
 ## [1.6.3] - 2023-02-20
 
