@@ -100,9 +100,6 @@
                         "name": {
                             "type": "string"
                         },
-                        "registry": {
-                            "type": "string"
-                        },
                         "tag": {
                             "type": "string"
                         }

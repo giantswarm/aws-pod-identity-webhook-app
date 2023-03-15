@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Use `image.registry` value as registry domain for the `restarter` image.
+
 ## [1.6.3] - 2023-02-20
 
 ### Added

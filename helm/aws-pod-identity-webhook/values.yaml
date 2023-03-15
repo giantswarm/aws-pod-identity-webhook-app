@@ -43,7 +43,6 @@ restarter:
   enabled: true
   schedule: "*/5 * * * *"
   image:
-    registry: docker.io
     name: giantswarm/aws-pod-identity-restarter
     tag: "[[ .Version ]]"
 

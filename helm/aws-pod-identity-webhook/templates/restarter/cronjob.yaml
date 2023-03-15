@@ -23,7 +23,7 @@ spec:
             component: restarter
         spec:
           containers:
-            - image: "{{ .Values.restarter.image.registry }}/{{ .Values.restarter.image.name }}:{{ .Values.restarter.image.tag }}"
+            - image: "{{ .Values.image.registry }}/{{ .Values.restarter.image.name }}:{{ .Values.restarter.image.tag }}"
               imagePullPolicy: IfNotPresent
               name: pod-restarter
               resources: {}
