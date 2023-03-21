@@ -56,3 +56,6 @@ podSecurityContext:
 securityContext:
   seccompProfile:
     type: RuntimeDefault
+
+ciliumNetworkPolicy:
+  enabled: false
