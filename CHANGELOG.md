@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix indentation for `seccompProfile` in `Deployment` Helm manifest. 
+
 ## [1.8.1] - 2023-05-01
 
 ### Fixed
