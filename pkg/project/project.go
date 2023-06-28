@@ -5,7 +5,7 @@ var (
 	gitSHA      = "n/a"
 	name        = "aws-pod-identity-webhook"
 	source      = "https://github.com/giantswarm/aws-pod-identity-webhook"
-	version     = "1.9.0"
+	version     = "1.9.1"
 )
 
 func Description() string {
