@@ -45,6 +45,8 @@ restarter:
   image:
     name: giantswarm/aws-pod-identity-restarter
     tag: "[[ .Version ]]"
+  podAnnotations:
+    cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
 
 # Add seccomp to pod security context
 podSecurityContext:

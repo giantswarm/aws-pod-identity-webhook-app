@@ -15,12 +15,16 @@ spec:
       labels:
         {{- include "labels.common" . | nindent 8 }}
         component: restarter
+{{- end }}
     spec:
       template:
         metadata:
           labels:
             {{- include "labels.common" . | nindent 12 }}
             component: restarter
+{{- if .Values.restarter.podAnnotations }}
+          annotations:
+{{ toYaml .Values.restarter.podAnnotations | indent 12 }}
         spec:
           containers:
             - image: "{{ .Values.image.registry }}/{{ .Values.restarter.image.name }}:{{ .Values.restarter.image.tag }}"
