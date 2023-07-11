@@ -50,6 +50,7 @@ restarter:
 
 # Add seccomp to pod security context
 podSecurityContext:
+  runAsNonRoot: true
   runAsUser: 1000
   seccompProfile:
     type: RuntimeDefault
@@ -58,3 +59,7 @@ podSecurityContext:
 securityContext:
   seccompProfile:
     type: RuntimeDefault
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop:
+    - ALL
