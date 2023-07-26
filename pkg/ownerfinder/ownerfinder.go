@@ -7,6 +7,7 @@ import (
 	"github.com/giantswarm/microerror"
 	"github.com/giantswarm/micrologger"
 	v1 "k8s.io/api/apps/v1"
+	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
@@ -53,6 +54,8 @@ func (of *OwnerFinder) FindOwner(ctx context.Context, pod corev1.Pod) (*metav1.O
 			obj = &v1.DaemonSet{}
 		case "StatefulSet":
 			obj = &v1.StatefulSet{}
+		case "Job":
+			obj = &batchv1.Job{}
 		default:
 			return nil, microerror.Maskf(unsupportedOwnerKindError, fmt.Sprintf("Unsupported Kind %s", owners[0].Kind))
 		}
