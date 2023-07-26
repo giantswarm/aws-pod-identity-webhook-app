@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.11.0] - 2023-07-26
+
 ### Changed
 
 - Use patch instead of update when restarting pods.
@@ -198,7 +200,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial chart release
 
-[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.10.0...HEAD
+[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.11.0...HEAD
+[1.11.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.10.0...v1.11.0
 [1.10.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.9.1...v1.10.0
 [1.9.1]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.9.0...v1.9.1
 [1.9.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.8.2...v1.9.0
