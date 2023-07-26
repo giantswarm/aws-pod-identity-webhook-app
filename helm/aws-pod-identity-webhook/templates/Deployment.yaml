@@ -24,6 +24,16 @@ spec:
         {{- include "labels.common" . | nindent 8 }}
         component: webhook
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app.kubernetes.io/name
+                    operator: In
+                    values:
+                      - {{ include "name" . | quote }}
+              topologyKey: "kubernetes.io/hostname"
       serviceAccountName: {{ .Values.name }}
       securityContext:
         {{- with .Values.podSecurityContext }}
@@ -63,6 +73,8 @@ spec:
             {{- with .Values.securityContext }}
               {{- . | toYaml | nindent 12 }}
             {{- end }}
+          resources:
+          {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - name: cert
               mountPath: "/etc/webhook/certs"

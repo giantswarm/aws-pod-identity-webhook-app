@@ -33,6 +33,14 @@ ports:
   webhook: 9443
   metrics: 9999
 
+resources:
+  requests:
+    cpu: 100m
+    memory: 50Mi
+  limits:
+    cpu: 100m
+    memory: 80Mi
+
 verticalPodAutoscaler:
   enabled: true
 
@@ -44,9 +52,16 @@ restarter:
   schedule: "*/5 * * * *"
   image:
     name: giantswarm/aws-pod-identity-restarter
-    tag: "[[ .Version ]]"
+    tag: ""
   podAnnotations:
     cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+  resources:
+    requests:
+      cpu: 100m
+      memory: 50Mi
+    limits:
+      cpu: 100m
+      memory: 80Mi
 
 # Add seccomp to pod security context
 podSecurityContext:
@@ -60,6 +75,7 @@ securityContext:
   seccompProfile:
     type: RuntimeDefault
   allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
   capabilities:
     drop:
     - ALL
