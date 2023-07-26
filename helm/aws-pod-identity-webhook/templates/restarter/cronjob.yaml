@@ -15,7 +15,6 @@ spec:
       labels:
         {{- include "labels.common" . | nindent 8 }}
         component: restarter
-{{- end }}
     spec:
       template:
         metadata:
@@ -25,6 +24,7 @@ spec:
 {{- if .Values.restarter.podAnnotations }}
           annotations:
 {{ toYaml .Values.restarter.podAnnotations | indent 12 }}
+{{- end }}
         spec:
           securityContext:
             runAsNonRoot: true
