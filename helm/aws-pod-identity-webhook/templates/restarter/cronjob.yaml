@@ -26,11 +26,16 @@ spec:
           annotations:
 {{ toYaml .Values.restarter.podAnnotations | indent 12 }}
         spec:
+          securityContext:
+            runAsNonRoot: true
           containers:
-            - image: "{{ .Values.image.registry }}/{{ .Values.restarter.image.name }}:{{ .Values.restarter.image.tag }}"
+            - image: "{{ .Values.image.registry }}/{{ .Values.restarter.image.name }}:{{ default .Chart.Version .Values.restarter.image.tag }}"
               imagePullPolicy: IfNotPresent
               name: pod-restarter
-              resources: {}
+              resources:
+              {{- toYaml .Values.restarter.resources | nindent 16 }}
+              securityContext:
+                readOnlyRootFilesystem: true
           dnsPolicy: ClusterFirst
           restartPolicy: Never
           serviceAccountName:  {{ .Values.name }}-restarter
