@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Use `topologySpreadConstraints` instead of `podAntiAffinity` to spread deployment replicas across nodes.
+
 ## [1.11.0] - 2023-07-26
 
 ### Changed

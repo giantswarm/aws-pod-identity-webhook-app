@@ -24,16 +24,13 @@ spec:
         {{- include "labels.common" . | nindent 8 }}
         component: webhook
     spec:
-      affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: app.kubernetes.io/name
-                    operator: In
-                    values:
-                      - {{ include "name" . | quote }}
-              topologyKey: "kubernetes.io/hostname"
+      topologySpreadConstraints:
+        - labelSelector:
+            matchLabels:
+              {{- include "labels.selector" . | nindent 14 }}
+          topologyKey: "kubernetes.io/hostname"
+          maxSkew: 1
+          whenUnsatisfiable: ScheduleAnyway
       serviceAccountName: {{ .Values.name }}
       securityContext:
         {{- with .Values.podSecurityContext }}
