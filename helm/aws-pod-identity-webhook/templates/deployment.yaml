@@ -24,6 +24,13 @@ spec:
         {{- include "labels.common" . | nindent 8 }}
         component: webhook
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  {{- include "labels.selector" . | nindent 18 }}
+              topologyKey: "kubernetes.io/hostname"
       topologySpreadConstraints:
         - labelSelector:
             matchLabels:
