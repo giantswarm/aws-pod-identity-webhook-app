@@ -4,6 +4,8 @@ apiVersion: apps/v1
 metadata:
   name: {{ .Values.name }}-app
   namespace: {{ .Values.namespace }}
+  annotations:
+    ignore-check.kube-linter.io/no-anti-affinity: "This deployment uses topologySpreadConstraints"
   labels:
     {{- include "labels.common" . | nindent 4 }}
     component: webhook
@@ -24,13 +26,6 @@ spec:
         {{- include "labels.common" . | nindent 8 }}
         component: webhook
     spec:
-      affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchLabels:
-                  {{- include "labels.selector" . | nindent 18 }}
-              topologyKey: "kubernetes.io/hostname"
       topologySpreadConstraints:
         - labelSelector:
             matchLabels:

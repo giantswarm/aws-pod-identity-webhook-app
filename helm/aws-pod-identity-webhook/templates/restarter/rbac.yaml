@@ -47,14 +47,8 @@ rules:
   - statefulsets
   - replicasets
   - daemonsets
+  - jobs
   verbs:
   - get
-- apiGroups:
-  - apps
-  resources:
-  - deployments
-  - statefulsets
-  - daemonsets
-  verbs:
-  - update
+  - patch
 {{ end }}
