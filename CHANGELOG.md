@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.12.0] - 2023-10-03
+
 ### Changed
 
 - Make PSP rendering conditional for 1.25+ compatibility
@@ -215,7 +217,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial chart release
 
-[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.11.1...HEAD
+[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.12.0...HEAD
+[1.12.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.11.1...v1.12.0
 [1.11.1]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.11.0...v1.11.1
 [1.11.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.10.0...v1.11.0
 [1.10.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.9.1...v1.10.0
