@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - In case it's not possible to determine the owner of a pod, log and continue rather than panic.
+- Fix `service`'s selector to not include the restarer job during prometheus scraping.
 
 ## [1.11.1] - 2023-07-31
 
