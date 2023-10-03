@@ -104,7 +104,8 @@ func (r *runner) run(ctx context.Context, cmd *cobra.Command, args []string) err
 	for _, pod := range pods {
 		owner, err := ownerFinder.FindOwner(ctx, pod)
 		if err != nil {
-			return microerror.Mask(err)
+			r.logger.Debugf(ctx, "error finding owner for pod %s/%s: %s", pod.Namespace, pod.Name, microerror.Cause(err))
+			continue
 		}
 
 		if owner != nil {
