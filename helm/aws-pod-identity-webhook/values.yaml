@@ -79,3 +79,8 @@ securityContext:
   capabilities:
     drop:
     - ALL
+
+global:
+  rodSecurityStandards:
+    enforced: false
+

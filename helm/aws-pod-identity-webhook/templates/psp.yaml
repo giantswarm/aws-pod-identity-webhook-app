@@ -1,4 +1,4 @@
-{{- if .Capabilities.APIVersions.Has "policy/v1beta1/PodSecurityPolicy" }}
+{{- if not .Values.global.podSecurityStandards.enforced }}
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
@@ -29,3 +29,4 @@ spec:
   runAsUser:
     rule: MustRunAsNonRoot
 {{- end }}
+
