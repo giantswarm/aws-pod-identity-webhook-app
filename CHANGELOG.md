@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.13.2] - 2023-10-18
+
 ### Fixed
 
 - Disable PSP for restarter component when PSS is enforced.
@@ -233,7 +235,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial chart release
 
-[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.13.1...HEAD
+[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.13.2...HEAD
+[1.13.2]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.13.1...v1.13.2
 [1.13.1]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.13.0...v1.13.1
 [1.13.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.12.0...v1.13.0
 [1.12.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.11.1...v1.12.0
