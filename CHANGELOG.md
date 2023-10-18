@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.13.1] - 2023-10-18
+
 ### Fixed
 
 - Don't add `use` permission on `PSP` when PSPs are disabled.
@@ -227,7 +229,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial chart release
 
-[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.13.0...HEAD
+[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.13.1...HEAD
+[1.13.1]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.13.0...v1.13.1
 [1.13.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.12.0...v1.13.0
 [1.12.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.11.1...v1.12.0
 [1.11.1]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.11.0...v1.11.1
