@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Don't add `use` permission on `PSP` when PSPs are disabled.
+
 ## [1.13.0] - 2023-10-18
 
 ### Added
