@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Disable PSP for restarter component when PSS is enforced.
+
 ## [1.13.1] - 2023-10-18
 
 ### Fixed
