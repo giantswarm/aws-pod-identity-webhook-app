@@ -4,8 +4,8 @@ go 1.19
 
 require (
 	github.com/giantswarm/k8sclient/v7 v7.0.1
-	github.com/giantswarm/microerror v0.4.0
-	github.com/giantswarm/micrologger v0.6.0
+	github.com/giantswarm/microerror v0.4.1
+	github.com/giantswarm/micrologger v1.1.1
 	github.com/spf13/cobra v1.4.0
 	github.com/spf13/pflag v1.0.5
 	k8s.io/api v0.25.0
@@ -23,9 +23,9 @@ require (
 	github.com/emicklei/go-restful/v3 v3.8.0 // indirect
 	github.com/evanphx/json-patch v4.12.0+incompatible // indirect
 	github.com/giantswarm/backoff v1.0.0 // indirect
-	github.com/go-kit/log v0.2.0 // indirect
-	github.com/go-logfmt/logfmt v0.5.1 // indirect
-	github.com/go-logr/logr v1.2.3 // indirect
+	github.com/go-kit/log v0.2.1 // indirect
+	github.com/go-logfmt/logfmt v0.6.0 // indirect
+	github.com/go-logr/logr v1.3.0 // indirect
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/jsonreference v0.19.5 // indirect
 	github.com/go-openapi/swag v0.19.14 // indirect
