@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/giantswarm/k8sclient/v7 v7.0.1
-	github.com/giantswarm/microerror v0.4.0
+	github.com/giantswarm/microerror v0.4.1
 	github.com/giantswarm/micrologger v0.6.0
 	github.com/spf13/cobra v1.4.0
 	github.com/spf13/pflag v1.0.5
