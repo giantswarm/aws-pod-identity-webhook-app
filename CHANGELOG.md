@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Configure `gsoci.azurecr.io` as the default container image registry.
+
 ## [1.13.2] - 2023-10-18
 
 ### Fixed
@@ -74,7 +78,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fix indentation for `seccompProfile` in `Deployment` Helm manifest. 
+- Fix indentation for `seccompProfile` in `Deployment` Helm manifest.
 
 ## [1.8.1] - 2023-05-01
 
