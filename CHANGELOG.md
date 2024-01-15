@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Configure `gsoci.azurecr.io` as the default container image registry.
+- Use `policy/v1` for `PodDisruptionBudget` (enabled since k8s 1.21).
 
 ## [1.13.2] - 2023-10-18
 
