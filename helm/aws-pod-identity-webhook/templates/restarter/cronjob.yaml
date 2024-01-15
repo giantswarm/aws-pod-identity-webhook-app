@@ -36,6 +36,7 @@ spec:
               {{- toYaml .Values.restarter.resources | nindent 16 }}
               securityContext:
                 readOnlyRootFilesystem: true
+                allowPrivilegeEscalation: false
           dnsPolicy: ClusterFirst
           restartPolicy: Never
           serviceAccountName:  {{ .Values.name }}-restarter
