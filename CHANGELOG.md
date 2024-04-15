@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.15.0] - 2024-04-15
+
 ### Changed
 
 - Set Cronjob's `concurrencyPolicy` to `Replace` to avoid failed jobs to pile up.
@@ -258,7 +260,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial chart release
 
-[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.14.2...HEAD
+[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.15.0...HEAD
+[1.15.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.14.2...v1.15.0
 [1.14.2]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.14.1...v1.14.2
 [1.14.1]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.14.0...v1.14.1
 [1.14.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.13.2...v1.14.0
