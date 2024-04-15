@@ -8,7 +8,7 @@ metadata:
     {{- include "labels.common" . | nindent 4 }}
     component: restarter
 spec:
-  concurrencyPolicy: Allow
+  concurrencyPolicy: Replace
   failedJobsHistoryLimit: 3
   jobTemplate:
     metadata:

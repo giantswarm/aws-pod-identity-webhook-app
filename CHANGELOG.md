@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Set Cronjob's `concurrencyPolicy` to `Replace` to avoid failed jobs to pile up.
+
 ## [1.14.2] - 2024-04-02
 
 ### Changed
