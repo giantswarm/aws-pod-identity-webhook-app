@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.15.1] - 2024-04-17
+
 ### Changed
 
 - Add toleration for `node.cluster.x-k8s.io/uninitialized` and `node-role.kubernetes.io/control-plane` taints.
@@ -265,7 +267,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial chart release
 
-[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.15.0...HEAD
+[Unreleased]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.15.1...HEAD
+[1.15.1]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.15.0...v1.15.1
 [1.15.0]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.14.2...v1.15.0
 [1.14.2]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.14.1...v1.14.2
 [1.14.1]: https://github.com/giantswarm/aws-pod-identity-webhook/compare/v1.14.0...v1.14.1
