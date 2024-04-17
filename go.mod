@@ -65,7 +65,7 @@ require (
 )
 
 replace (
-	github.com/miekg/dns => github.com/miekg/dns v1.1.58
+	github.com/miekg/dns => github.com/miekg/dns v1.1.59
 	github.com/prometheus/client_golang => github.com/prometheus/client_golang v1.19.0
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc => go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.50.0
 	golang.org/x/net => golang.org/x/net v0.24.0
