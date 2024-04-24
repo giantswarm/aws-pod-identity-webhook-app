@@ -63,11 +63,3 @@ require (
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3 // indirect
 	sigs.k8s.io/yaml v1.2.0 // indirect
 )
-
-replace (
-	github.com/miekg/dns => github.com/miekg/dns v1.1.58
-	github.com/prometheus/client_golang => github.com/prometheus/client_golang v1.19.0
-	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc => go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.51.0
-	golang.org/x/net => golang.org/x/net v0.24.0
-	golang.org/x/text => golang.org/x/text v0.14.0
-)
