@@ -46,6 +46,7 @@ verticalPodAutoscaler:
 
 aws:
   tokenAudience: sts.amazonaws.com
+  region: ""
 
 restarter:
   enabled: true

@@ -10,7 +10,10 @@
             "properties": {
                 "tokenAudience": {
                     "type": "string"
-                }
+                },
+		"region": {
+		    "type": "string"
+		}
             }
         },
         "gsImage": {
