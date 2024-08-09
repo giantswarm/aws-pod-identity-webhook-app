@@ -16,7 +16,7 @@ spec:
   targetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name:  {{ .Values.name }}
+    name:  {{ .Values.name }}-app
   updatePolicy:
     updateMode: Auto
 {{ end }}
