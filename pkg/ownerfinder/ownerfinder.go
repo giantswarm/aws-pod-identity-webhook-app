@@ -2,7 +2,6 @@ package ownerfinder
 
 import (
 	"context"
-	"fmt"
 
 	"github.com/giantswarm/microerror"
 	"github.com/giantswarm/micrologger"
@@ -57,7 +56,7 @@ func (of *OwnerFinder) FindOwner(ctx context.Context, pod corev1.Pod) (*metav1.O
 		case "Job":
 			obj = &batchv1.Job{}
 		default:
-			return nil, microerror.Maskf(unsupportedOwnerKindError, fmt.Sprintf("Unsupported Kind %s", owners[0].Kind))
+			return nil, microerror.Maskf(unsupportedOwnerKindError, "Unsupported Kind %s", owners[0].Kind)
 		}
 		err := of.ctrlClient.Get(ctx, client.ObjectKey{Namespace: pod.Namespace, Name: owners[0].Name}, obj)
 		if err != nil {
