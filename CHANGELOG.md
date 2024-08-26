@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix VPA being ineffective due to referring to a non-existing `Deployment` name
+
 ## [1.16.0] - 2024-06-06
 
 ### Added
