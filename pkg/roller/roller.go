@@ -50,7 +50,7 @@ func (r *Roller) Roll(ctx context.Context, rollable types.Rollable) error {
 	case "Job":
 		return r.rollJob(ctx, rollable)
 	default:
-		return microerror.Maskf(unsupportedKindError, fmt.Sprintf("Unsupported Kind %s", rollable.Kind))
+		return microerror.Maskf(unsupportedKindError, "Unsupported Kind %s", rollable.Kind)
 	}
 }
 
