@@ -1,6 +1,8 @@
 package unittest
 
 import (
+	"fmt"
+
 	"github.com/giantswarm/k8sclient/v7/pkg/k8sclient"
 	"github.com/giantswarm/k8sclient/v7/pkg/k8scrdclient"
 	v1 "k8s.io/api/core/v1"
@@ -26,8 +28,18 @@ func FakeK8sClient() k8sclient.Interface {
 		_ = v1.AddToScheme(scheme)
 
 		k8sClient = &fakeK8sClient{
-			ctrlClient: fake.NewClientBuilder().WithScheme(scheme).Build(),
-			k8sClient:  fakek8s.NewSimpleClientset(),
+			ctrlClient: fake.NewClientBuilder().WithScheme(scheme).
+				// podfinder module requires this index
+				WithIndex(&v1.Pod{}, "spec.serviceAccountName", func(obj client.Object) []string {
+					pod, ok := obj.(*v1.Pod)
+					if !ok {
+						panic(fmt.Errorf("fake client's indexer function for type %T's spec.serviceAccountName field received"+
+							" object of type %T, this should never happen", v1.Pod{}, obj))
+					}
+					return []string{pod.Spec.ServiceAccountName}
+				}).
+				Build(),
+			k8sClient: fakek8s.NewSimpleClientset(),
 		}
 	}
 
