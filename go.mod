@@ -2,7 +2,7 @@ module github.com/giantswarm/aws-pod-identity-webhook
 
 go 1.22.0
 
-toolchain go1.23.2
+toolchain go1.23.3
 
 require (
 	github.com/giantswarm/k8sclient/v8 v8.0.0
