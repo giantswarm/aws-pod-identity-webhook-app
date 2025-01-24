@@ -25,16 +25,6 @@ metadata:
   labels:
     {{- include "labels.common" . | nindent 4 }}
 rules:
-{{- if not .Values.global.podSecurityStandards.enforced }}
-- apiGroups:
-  - policy
-  resourceNames:
-  - {{ .Values.name }}-restarter
-  resources:
-  - podsecuritypolicies
-  verbs:
-  - use
-{{- end }}
 - apiGroups:
   - ""
   resources:
