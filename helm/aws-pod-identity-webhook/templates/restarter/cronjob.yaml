@@ -27,7 +27,9 @@ spec:
 {{- end }}
         spec:
           securityContext:
-            runAsNonRoot: true
+          {{- with .Values.restarter.podSecurityContext }}
+            {{- . | toYaml | nindent 12 }}
+          {{- end }}
           containers:
             - image: "{{ .Values.image.registry }}/{{ .Values.restarter.image.name }}:{{ default .Chart.Version .Values.restarter.image.tag }}"
               imagePullPolicy: IfNotPresent
@@ -35,8 +37,9 @@ spec:
               resources:
               {{- toYaml .Values.restarter.resources | nindent 16 }}
               securityContext:
-                readOnlyRootFilesystem: true
-                allowPrivilegeEscalation: false
+              {{- with .Values.restarter.securityContext }}
+                {{- . | toYaml | nindent 16 }}
+              {{- end }}
           dnsPolicy: ClusterFirst
           restartPolicy: Never
           serviceAccountName:  {{ .Values.name }}-restarter
