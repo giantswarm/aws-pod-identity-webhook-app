@@ -53,6 +53,9 @@
         "podSecurityContext": {
             "type": "object",
             "properties": {
+                "runAsGroup": {
+                    "type": "integer"
+                },
                 "runAsUser": {
                     "type": "integer"
                 },
@@ -63,10 +66,6 @@
                             "type": "string"
                         }
                     }
-                },
-                "runAsNonRoot": {
-                    "type": "boolean",
-                    "default": true
                 }
             }
         },
@@ -132,6 +131,21 @@
                     "type": "boolean",
                     "default": false
                 },
+                "readOnlyRootFilesystem": {
+                    "type": "boolean"
+                },
+                "runAsGroup": {
+                    "type": "integer"
+                },
+                "runAsNonRoot": {
+                    "type": "boolean"
+                },
+                "runAsUser": {
+                    "type": "integer"
+                },
+                "privileged": {
+                    "type": "boolean"
+                },
                 "capabilities":{
                     "type": "object",
                     "properties": {
@@ -154,19 +168,6 @@
             "properties": {
                 "enabled": {
                     "type": "boolean"
-                }
-            }
-        },
-        "global": {
-            "type": "object",
-            "properties": {
-                "podSecurityStandards": {
-                    "type": "object",
-                    "properties": {
-                        "enforced": {
-                            "type": "boolean"
-                        }
-                    }
                 }
             }
         }

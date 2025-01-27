@@ -11,4 +11,5 @@ spec:
     matchLabels:
       {{- include "labels.selector" . | nindent 6 }}
       component: webhook
+  unhealthyPodEvictionPolicy: AlwaysAllow
 ---
