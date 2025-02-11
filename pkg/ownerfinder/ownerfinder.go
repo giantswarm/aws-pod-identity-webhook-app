@@ -56,8 +56,15 @@ func (of *OwnerFinder) FindOwner(ctx context.Context, pod corev1.Pod) (*metav1.O
 		case "Job":
 			obj = &batchv1.Job{}
 		default:
-			return nil, microerror.Maskf(unsupportedOwnerKindError, "Unsupported Kind %s", owners[0].Kind)
+			of.logger.Debugf(ctx, "Unknown owner kind %s, the last known owner (if any) will be used", owners[0].Kind)
 		}
+
+		if obj == nil {
+			// If it doesn't have an owner or it is an unknown kind, we stop here.
+			// lastOwner will be nil or the last known owner and will be handled later.
+			break
+		}
+
 		err := of.ctrlClient.Get(ctx, client.ObjectKey{Namespace: pod.Namespace, Name: owners[0].Name}, obj)
 		if err != nil {
 			return nil, microerror.Mask(err)
